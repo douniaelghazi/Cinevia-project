@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <header>
     <nav class="navbar">
         <div class="logo">Cinevia</div>
         <ul class="nav-links">
@@ -19,15 +19,13 @@
             <input type="text" placeholder="Rechercher...">
         </div>
     </nav>
-
-    <header class="hero">
-        <div class="hero-overlay">
+  <img src="image/back.jpg" alt="cinevia">
             <div class="hero-content">
                 <h1>Découvrez les meilleurs films 🎥</h1>
                 <p>Explorez, recherchez et ajoutez vos films préférés</p>
                 <button class="btn-main">Explorer maintenant</button>
             </div>
-        </div>
+
     </header>
 
     <section class="filters-container">
@@ -38,94 +36,82 @@
             <button class="filter-btn">Drame</button>
         </div>
     </section>
-
-    <main class="container">
-        <h2 class="section-title">Films populaires</h2>
-        <div id="movie-grid" class="movie-grid">
-            </div>
-
+<section class="movies-container">
+    <h2 class="section-title">Films populaires</h2>
     
     <div class="movie-grid" id="movie-grid">
-        <article class="movie-card" data-category="Action">
+        <article class="movie-card">
             <div class="card-img">
-                
+                <img src="image/the last miss.jpg" alt="Comedy 1">
             </div>
             <div class="card-content">
                 <h3>The Last Mission</h3>
-                <span class="badge">Action</span>
-                <button class="btn-details" onclick="openModal('The Last Mission', 'Action', 'Un film d\'action intense.')">Voir détails</button>
+                <button>Voir détails</button>
             </div>
         </article>
 
-        <article class="movie-card" data-category="Action">
+        <article class="movie-card">
             <div class="card-img">
-                
+                <img src="image/urban.jpg" alt="Comedy 1">
             </div>
             <div class="card-content">
                 <h3>Urban Fighter</h3>
-                <span class="badge">Action</span>
-                <button class="btn-details" onclick="openModal('Urban Fighter', 'Action', 'Combat urbain pour la survie.')">Voir détails</button>
+                <button>Voir détails</button>
             </div>
         </article>
 
-        <article class="movie-card" data-category="Comédie">
+        <article class="movie-card">
             <div class="card-img">
-                
+                <img src="image/jhonnt.jpg" alt="Comedy 1">
             </div>
             <div class="card-content">
-                <h3>Night Laughs</h3>
-                <span class="badge">Comédie</span>
-                <button class="btn-details" onclick="openModal('Night Laughs', 'Comédie', 'Une nuit pleine de surprises.')">Voir détails</button>
+                <h3>Johnny English</h3>
+                <button>Voir détails</button>
             </div>
         </article>
 
-        <article class="movie-card" data-category="Comédie">
+        <article class="movie-card">
             <div class="card-img">
-                
+                <img src="image/bf.avif" alt="Comedy 2">
+            </div>
             <div class="card-content">
                 <h3>Best Friends</h3>
-                <span class="badge">Comédie</span>
-                <button class="btn-details" onclick="openModal('Best Friends', 'Comédie', 'L\'amitié mise à l\'épreuve.')">Voir détails</button>
+                <button>Voir détails</button>
             </div>
         </article>
 
-        <article class="movie-card" data-category="Drame">
+        <article class="movie-card">
             <div class="card-img">
-                
+                <img src="image/the-silence.jpg" alt="Drama 2">
+            </div>
             <div class="card-content">
                 <h3>The Silence</h3>
-                <span class="badge">Drame</span>
-                <button class="btn-details" onclick="openModal('The Silence', 'Drame', 'Une histoire touchante.')">Voir détails</button>
+                <button>Voir détails</button>
             </div>
         </article>
 
-        <article class="movie-card" data-category="Drame">
+        <article class="movie-card">
             <div class="card-img">
-                
+                <img src="image/memory.jpg" alt="Drama 2">
             </div>
             <div class="card-content">
                 <h3>Memory Lane</h3>
-                <span class="badge">Drame</span>
-                <button class="btn-details" onclick="openModal('Memory Lane', 'Drame', 'Voyage dans le passé.')">Voir détails</button>
+                <button>Voir détails</button>
             </div>
         </article>
     </div>
 </section>
 
-<div id="movie-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <div id="modal-content-inner"></div>
-    </div>
+
 </div>
+        <div id="favorites-grid" class="movie-grid"></div>
         <h2 class="section-title">Mes Favoris ❤️</h2>
-        <div id="favorites-grid" class="movie-grid">
             </div>
     </main>
     <footer>
         <p>&copy; 2026 Cinevia - Tous droits réservés</p>
     </footer>
 
-    <script src="script.js"></script>
+    
 </body>
 </html>
