@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+<header>
     <nav class="navbar">
         <div class="logo">Cinevia</div>
         <ul class="nav-links">
@@ -19,99 +20,109 @@
             <input type="text" placeholder="Rechercher...">
         </div>
     </nav>
-  <img src="image/back.jpg" alt="cinevia">
-            <div class="hero-content">
-                <h1>Découvrez les meilleurs films 🎥</h1>
-                <p>Explorez, recherchez et ajoutez vos films préférés</p>
-                <button class="btn-main">Explorer maintenant</button>
-            </div>
 
-    </header>
+    <img src="image/back.jpg" alt="cinevia">
 
-    <section class="filters-container">
-        <div class="filters">
-            <button class="filter-btn active">Tous</button>
-            <button class="filter-btn">Action</button>
-            <button class="filter-btn">Comédie</button>
-            <button class="filter-btn">Drame</button>
-        </div>
-    </section>
-<section class="movies-container">
-    <h2 class="section-title">Films populaires</h2>
-    
-    <div class="movie-grid" id="movie-grid">
-        <article class="movie-card">
-            <div class="card-img">
-                <img src="image/the last miss.jpg" alt="Comedy 1">
-            </div>
-            <div class="card-content">
-                <h3>The Last Mission</h3>
-                <button>Voir détails</button>
-            </div>
-        </article>
+    <div class="hero-content">
+        <h1>Découvrez les meilleurs films 🎥</h1>
+        <p>Explorez, recherchez et ajoutez vos films préférés</p>
+        <button class="btn-main">Explorer maintenant</button>
+    </div>
+</header>
 
-        <article class="movie-card">
-            <div class="card-img">
-                <img src="image/urban.jpg" alt="Comedy 1">
-            </div>
-            <div class="card-content">
-                <h3>Urban Fighter</h3>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card">
-            <div class="card-img">
-                <img src="image/jhonnt.jpg" alt="Comedy 1">
-            </div>
-            <div class="card-content">
-                <h3>Johnny English</h3>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card">
-            <div class="card-img">
-                <img src="image/bf.avif" alt="Comedy 2">
-            </div>
-            <div class="card-content">
-                <h3>Best Friends</h3>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card">
-            <div class="card-img">
-                <img src="image/the-silence.jpg" alt="Drama 2">
-            </div>
-            <div class="card-content">
-                <h3>The Silence</h3>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card">
-            <div class="card-img">
-                <img src="image/memory.jpg" alt="Drama 2">
-            </div>
-            <div class="card-content">
-                <h3>Memory Lane</h3>
-                <button>Voir détails</button>
-            </div>
-        </article>
+<section class="filters-container">
+    <div class="filters">
+        <button class="filter-btn active">Tous</button>
+        <button class="filter-btn">Action</button>
+        <button class="filter-btn">Comédie</button>
+        <button class="filter-btn">Drame</button>
     </div>
 </section>
 
+<section class="movies-container">
+    <h2 class="section-title">Films populaires</h2>
 
-</div>
-        <div id="favorites-grid" class="movie-grid"></div>
-        <h2 class="section-title">Mes Favoris ❤️</h2>
+    <div class="movie-grid" id="movie-grid">
+
+        <article class="movie-card" data-category="Action">
+            <div class="card-img">
+                <img src="image/the last miss.jpg">
             </div>
-    </main>
-    <footer>
-        <p>&copy; 2026 Cinevia - Tous droits réservés</p>
-    </footer>
+            <div class="card-content">
+                <h3>The Last Mission</h3>
+                <p>Action</p>
+                <button>Voir détails</button>
+            </div>
+        </article>
 
-    
+        <article class="movie-card" data-category="Action">
+            <div class="card-img">
+                <img src="image/urban.jpg">
+            </div>
+            <div class="card-content">
+                <h3>Urban Fighter</h3>
+                <p>Action</p>
+                <button>Voir détails</button>
+            </div>
+        </article>
+
+        <article class="movie-card" data-category="Comédie">
+            <div class="card-img">
+                <img src="image/jhonnt.jpg">
+            </div>
+            <div class="card-content">
+                <h3>Johnny English</h3>
+                <p>Comedie</p>
+                <button>Voir détails</button>
+            </div>
+        </article>
+
+        <article class="movie-card" data-category="Comédie">
+            <div class="card-img">
+                <img src="image/bf.avif">
+            </div>
+            <div class="card-content">
+                <h3>Best Friends</h3>
+                <p>Comedie</p>
+                <button>Voir détails</button>
+            </div>
+        </article>
+
+        <article class="movie-card" data-category="Drame">
+            <div class="card-img">
+                <img src="image/the-silence.jpg">
+            </div>
+            <div class="card-content">
+                <h3>The Silence</h3>
+                <p>Drame</p>
+                <button>Voir détails</button>
+            </div>
+        </article>
+
+        <article class="movie-card">
+            <div class="card-img">
+                <img src="image/memory.jpg" data-category="Drame">
+            </div>
+            <div class="card-content">
+                <h3>Memory Lane</h3>
+                <p>Drame</p>
+                <button>Voir détails</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="movies-container">
+    <h2 class="section-title">Mes Favoris ❤️</h2>
+    <div id="favorites-grid" class="movie-grid"></div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Cinevia - Tous droits réservés</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
