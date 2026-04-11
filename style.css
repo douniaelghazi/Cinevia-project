@@ -19,6 +19,8 @@ body {
     align-items: center;
     padding: 15px 40px;
     background: #0a0f1f;
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
@@ -57,6 +59,8 @@ body {
 /* ================= HEADER ================= */
 header {
     position: relative;
+    z-index: 1;
+
 }
 
 header img {
@@ -70,6 +74,7 @@ header::after {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.5);
+    z-index: 0;
 }
 
 /* HERO */
@@ -188,6 +193,9 @@ header::after {
 .card-content h3 {
     font-size: 1.1rem;
     margin: 10px 0;
+}
+.card-content p{
+    margin-bottom: 15px;
 }
 
 /* BUTTON CARD */
