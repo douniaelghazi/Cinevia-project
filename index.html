@@ -21,107 +21,54 @@
         </div>
     </nav>
 
-    <img src="image/back.jpg" alt="cinevia">
-
-    <div class="hero-content">
-        <h1>Découvrez les meilleurs films 🎥</h1>
-        <p>Explorez, recherchez et ajoutez vos films préférés</p>
-        <button class="btn-main">Explorer maintenant</button>
-    </div>
+    <section id="Accueil" class="hero">
+        <img src="image/back.jpg" alt="cinevia">
+        <div class="hero-content">
+            <h1>Découvrez les meilleurs films 🎥</h1>
+            <p>Explorez, recherchez et ajoutez vos films préférés</p>
+            <button>Explorer maintenant</button>
+        </div>
+    </section>
 </header>
+<main>
 
-<section class="filters-container">
-    <div class="filters">
-        <button class="filter-btn active">Tous</button>
-        <button class="filter-btn">Action</button>
-        <button class="filter-btn">Comédie</button>
-        <button class="filter-btn">Drame</button>
-    </div>
-</section>
+    <section class="filters-container">
+        <div class="filters">
+            <button class="filter-btn active">Tous</button>
+            <button class="filter-btn">Action</button>
+            <button class="filter-btn">Comédie</button>
+            <button class="filter-btn">Drame</button>
+        </div>
+    </section>
 
-<section id= "moviescontainer" class="movies-container">
+    <section class="movies-container"> 
     <h2 class="section-title">Films populaires</h2>
+    <div class="movie-grid" id="movie-container"></div>
+</section>
 
-    <div class="movie-grid" id="movie-grid">
+    <section id="Favoris" class="favorites">
+        <h2 class="section-title">Mes Favoris ❤️</h2>
+        <div class="movie-grid" id="movie-grid-fav"></div>
+    </section>
 
-        <article class="movie-card" data-category="Action">
-            <div class="card-img">
-                <img src="image/the last miss.jpg">
-            </div>
-            <div class="card-content">
-                <h3>The Last Mission</h3>
-                <p>Action</p>
-                <button>Voir détails</button>
-            </div>
-        </article>
 
-        <article class="movie-card" data-category="Action">
-            <div class="card-img">
-                <img src="image/urban.jpg">
-            </div>
-            <div class="card-content">
-                <h3>Urban Fighter</h3>
-                <p>Action</p>
-                <button>Voir détails</button>
-            </div>
-        </article>
 
-        <article class="movie-card" data-category="Comédie">
-            <div class="card-img">
-                <img src="image/jhonnt.jpg">
-            </div>
-            <div class="card-content">
-                <h3>Johnny English</h3>
-                <p>Comedie</p>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card" data-category="Comédie">
-            <div class="card-img">
-                <img src="image/bf.avif">
-            </div>
-            <div class="card-content">
-                <h3>Best Friends</h3>
-                <p>Comedie</p>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card" data-category="Drame">
-            <div class="card-img">
-                <img src="image/the-silence.jpg">
-            </div>
-            <div class="card-content">
-                <h3>The Silence</h3>
-                <p>Drame</p>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
-        <article class="movie-card" data-category="Drame">
-            <div class="card-img">
-                <img src="image/memory.jpg">
-            </div>
-            <div class="card-content">
-                <h3>Memory Lane</h3>
-                <p>Drame</p>
-                <button>Voir détails</button>
-            </div>
-        </article>
-
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <img id="modal-img" src="" alt="">
+        <div class="modal-info"> <h2 id="modal-title"></h2>
+            <p id="modal-category" style="color: #e11d48; margin-bottom: 10px;"></p>
+            <p id="modal-description"></p>
+            <button id="add-fav">Ajouter aux Favoris ❤️</button>
+        </div>
     </div>
-</section>
-
-<section class="movies-container">
-    <h2 class="section-title">Mes Favoris ❤️</h2>
-    <div id="favorites-grid" class="movie-grid"></div>
-</section>
+</div>
 
 <footer>
     <p>&copy; 2026 Cinevia - Tous droits réservés</p>
 </footer>
-
+</main>
 <script src="script.js"></script>
 </body>
 </html>
