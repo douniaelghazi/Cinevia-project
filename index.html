@@ -12,13 +12,11 @@
     <nav class="navbar">
         <div class="logo">Cinevia</div>
         <ul class="nav-links">
-            <li><a href="#" class="active">Accueil</a></li>
-            <li><a href="#">Films</a></li>
-            <li><a href="#">Favoris</a></li>
+            <li><a href="#Accueil" class="active">Accueil</a></li>
+            <li><a href="#films">Films</a></li>
+            <li><a href="#Favoris">Favoris</a></li>
         </ul>
-        <div class="search-bar">
-            <input type="text" placeholder="Rechercher...">
-        </div>
+        
     </nav>
 
     <section id="Accueil" class="hero">
@@ -31,21 +29,18 @@
     </section>
 </header>
 <main>
-
+<div id="filters-wrapper">
     <section class="filters-container">
-        <div class="filters">
-            <button class="filter-btn active">Tous</button>
-            <button class="filter-btn">Action</button>
-            <button class="filter-btn">Comédie</button>
-            <button class="filter-btn">Drame</button>
-        </div>
+        <button onclick="filterMovies('Tous')">Tous</button>
+        <button onclick="filterMovies('Action')">Action</button>
+        <button onclick="filterMovies('Comédie')">Comédie</button>
+        <button onclick="filterMovies('Drame')">Drame</button>
     </section>
-
-    <section class="movies-container"> 
+</div>
+    <section id="films" class="movies-container"> 
     <h2 class="section-title">Films populaires</h2>
-    <div class="movie-grid" id="movie-container"></div>
 </section>
-
+<div class="movie-grid" id="movie-container"></div>
     <section id="Favoris" class="favorites">
         <h2 class="section-title">Mes Favoris ❤️</h2>
         <div class="movie-grid" id="movie-grid-fav"></div>
@@ -54,15 +49,16 @@
 
 
 <div id="modal" class="modal">
-    <div class="modal-content">
-        <span id="close">&times;</span>
-        <img id="modal-img" src="" alt="">
-        <div class="modal-info"> <h2 id="modal-title"></h2>
-            <p id="modal-category" style="color: #e11d48; margin-bottom: 10px;"></p>
-            <p id="modal-description"></p>
-            <button id="add-fav">Ajouter aux Favoris ❤️</button>
-        </div>
-    </div>
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    
+    <img id="modal-img" src="" alt="">
+    <h2 id="modal-titre"></h2>
+    <p id="modal-categorie"></p>
+    <p id="modal-description"></p> 
+     <button class="btn" id="add-fav"> Ajouter aux favoris❤️</button>
+
+  </div>
 </div>
 
 <footer>

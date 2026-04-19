@@ -51,14 +51,7 @@ top: 0;
     color: white;
 }
 
-/* ================= SEARCH ================= */
-.search-bar input {
-    padding: 8px 15px;
-    border-radius: 8px;
-    border: none;
-    background: #1f2a44;
-    color: white;
-}
+
 
 /* ================= HEADER ================= */
 header {
@@ -123,85 +116,113 @@ header::after {
 }
 
 /* ================= FILTERS ================= */
-.filters-container {
+#filters-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: -30px;
     position: relative;
-    z-index: 3;
+    margin-top: -30px; 
+    z-index: 10;
 }
 
-.filters {
-    background: #1f2a44;
-    padding: 10px;
-    border-radius: 10px;
+.filters-container {
     display: flex;
     gap: 10px;
+    background: #2b374a;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.filter-btn {
+/* buttons */
+.filters-container button {
     background: transparent;
     border: none;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 6px;
+    color: #ccc;
+    padding: 8px 18px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.filter-btn.active {
-    background: #2f3f63;
+.filters-container button.active {
+    background: #3d4b61;
+    color: white;
 }
 
 /* ================= MOVIES SECTION ================= */
 .movies-container {
     padding: 40px 5%;
+
 }
 
 .section-title {
     font-size: 1.5rem;
     margin-bottom: 25px;
+   
 }
 
 /* GRID */
+
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center;
+    gap: 30px;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* ================= CARD ================= */
+
 .movie-card {
+    width: 100%; 
     background: #111827;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease;
     border: 1px solid #1f2937;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .movie-card:hover {
     transform: translateY(-8px);
 }
+@media (max-width: 900px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 250px);
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-grid {
+        grid-template-columns: repeat(1, 250px);
+    }
+}
 
 .card-img img {
     width: 100%;
-    height: 280px;
-    object-fit: cover;
+    height: 380px; 
+    object-fit: cover; 
+    display: block;
+    object-position: top;
 }
 
 /* CARD CONTENT */
 .card-content {
     padding: 15px;
+    text-align: center;
 }
 
 .card-content h3 {
     font-size: 1.1rem;
     margin: 10px 0;
+    text-align: center;
 }
 .card-content p{
     margin-bottom: 5px 10px;
     font-size: 13px;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
 }
 
 /* BUTTON CARD */
@@ -220,7 +241,7 @@ header::after {
 .card-content button:hover {
     background: #be123c;
 }
-/* L-khlawat dyal l-modal */
+
 .modal {
     display: none; 
     position: fixed;
@@ -246,25 +267,29 @@ header::after {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
-/* T-qad l-tswira west l-modal */
+
 #modal-img {
     width: 100%;
     height: 300px; 
     object-fit: cover; 
 }
 
-/* L-ktiba west l-modal */
+
 .modal-info {
     padding: 20px;
     text-align: left; 
+    text-align: center;
 }
 
 #modal-title {
     font-size: 24px;
     margin-bottom: 10px;
     color: white;
+    text-align: center;
+    
 }
 
 #modal-description {
@@ -272,9 +297,14 @@ header::after {
     color: #ccc;
     line-height: 1.5;
     margin-bottom: 20px;
+    text-align: center;
+}
+#Favoris {
+    text-align:start;
+    padding: 0 0 0 60px;
 }
 
-/* L-bouton dyal ajouter aux favoris f l-modal */
+
 #add-fav {
     width: 100%;
     background: #e11d48;
@@ -291,19 +321,25 @@ header::after {
     background: #be123c;
 }
 
-/* L-close button (dik X) */
+
 #close {
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 20px;
+    top: 15px;
+    font-size: 30px; 
+    font-weight: bold;
     color: white;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
+    cursor: pointer; 
+    z-index: 100;
+    transition: 0.3s;
+}
+
+#close:hover {
+    color: #e11d48; 
 }
 .remove-fav-btn {
     width: 100%;
-    background: #4b5563; /* Couleur grise pour différencier */
+    background: #4b5563; 
     color: white;
     border: none;
     padding: 8px;
